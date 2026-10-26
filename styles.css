@@ -1,10 +1,25 @@
 /*All colors
     page background ---- color: #FCF6E9;
-    dark green text ---- color: #39452a;
+    dark green basic text ---- color: #39452a;
     brown text ---- color: #563A25;
-    red text ---- color: #7F1A1C;
-    light green text ---- color: #7B925E;
+    red header ---- color: #7F1A1C;
+    light green details ---- color: #7B925E;
+    darker beige for autofill ---- color: #ded8cb;
 */
+*,
+input,
+textarea,
+select,
+button {
+  color: #563A25;
+  border-color: #563A25;
+}
+
+::placeholder {
+  color: #563A25;
+  opacity: 0.7;
+}
+
 
 .mountains-of-christmas-bold {
   font-family: "Mountains of Christmas", serif;
@@ -40,7 +55,6 @@ form, p
     color: #39452a;
     input[type="radio"], input[type="checkbox"], input[type="date"]{
         accent-color: #7B925E;
-
     }
 }
 
@@ -76,5 +90,27 @@ form, p
     display: block;
     max-width: 200px;
     height: auto;
+}
+
+input {
+  color: #563A25;
+  accent-color: #7B925E;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #563A25;
+  -webkit-box-shadow: 0 0 0px 1000px #ded8cb inset;
+}
+
+input[type="date"] {
+  color: #563A25;
+  border: 1px solid #563A25;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 4px 8px;
+  border-radius: 4px;
+  accent-color: #7B925E;
 }
 
