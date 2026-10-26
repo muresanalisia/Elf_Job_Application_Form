@@ -126,6 +126,35 @@
           <label><input type="checkbox" name="skill" value="ornament"> Rapid Ornament Restoration</label>
         </fieldset><br>
 
+
+          <!-- Upload CV and other relevant files -->
+        <section class="CV_RelevantFiles">
+            <label for="CVfile" class="CV_Label">Upload your CV and other relevant files</label>
+            <div class="UploadFileButton">
+              <input type="file" id="CVfile" name="CVfile" multiple> 
+            </div> 
+        </section>
+          <!-- Any comments part  -->
+        <section class="comments_section">
+            <label for="comments_box" class="comments_label">Any comments ?</label>
+            <textarea id="comments_box" name="comments" class="textarea_comments" placeholder="Comments"></textarea>  
+        </section>
+          <!-- Selfie upload for preview -->
+        <section class="photo_section">
+            <label for="photo_file" class="photo_label"> Upload a selfie of yourself to see how you'll look on our team</label>
+            <div class="UploadPhotoButton">
+              <label for="photo">Photo file</label>
+              <input type="file" id="photo" name="photo">
+            </div>
+        </section>
+          <!-- Elf Preview -->
+        <section class="selfie_section">
+            <div class="elf_selfie_container">
+              <img src="ElfSelfie.png" alt="Christmas elf selfie preview">
+            </div>
+        </section>
+
+          
           <!-- Accept terms checkbox -->
      <input type="checkbox" name="terms" id="terms" required>
      <label for="terms">I accept the <a href="terms.html" target="_blank">Terms & Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a></label><br>
