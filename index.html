@@ -16,7 +16,7 @@
     </header>
 
     <main>
-      <form action="submitted.html" method="post">
+      <form action="submitted.html" method="get">
         
         <!-- Radio Buttons - Belief in Santa Claus -->
         <fieldset>
@@ -37,7 +37,7 @@
         <!-- Email form -->
         <div>
           <label for="email">Enter your email address:</label><br>
-          <input type="email" name="email" id="email" required><br>
+          <input type="email" name="email" id="email" required><br><br>
         </div>
 
         <!-- Date form - birthday -->
@@ -50,7 +50,7 @@
         <div>
           <label for="password">Create a password: </label><br>
           <input type="password" name="password" id="password" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must be at least 8 characters long and contain at least one number, one uppercase letter, and one lowercase letter."><br>
-          <small>*Must be at least 8 characters long and contain at least one number, one uppercase letter, and one lowercase letter.</small><br>
+          <small class="password-hint">*Must be at least 8 characters long and contain at least one number, one uppercase letter, and one lowercase letter.</small><br>
         </div><br>
 
         <!-- Radio buttons -  Nice / Naughty -->
@@ -70,7 +70,7 @@
         <div>
           <label for="height">
             Choose your height (cm)<br>
-            *If you are over 170cm, you may be redirected to our Giants department.
+            *If you are over 170cm, you may be redirected to our Giants department.<br>
           </label>
 
           <select name="height" id="height">
@@ -141,11 +141,13 @@
               <input type="file" id="CVfile" name="CVfile" multiple> 
             </div> 
         </section>
+
           <!-- Any comments part  -->
         <section class="comments_section">
             <label for="comments_box" class="comments_label">Any comments ?</label>
             <textarea id="comments_box" name="comments" class="textarea_comments" placeholder="Comments"></textarea>  
         </section>
+
           <!-- Selfie upload for preview -->
         <section class="photo_section">
             <label for="photo_file" class="photo_label"> Upload a selfie of yourself to see how you'll look on our team</label>
@@ -154,6 +156,7 @@
               <input type="file" id="photo" name="photo">
             </div>
         </section>
+
           <!-- Elf Preview -->
         <section class="selfie_section">
             <div class="elf_selfie_container">
