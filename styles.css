@@ -6,20 +6,25 @@
     light green details ---- color: #7B925E;
     darker beige for autofill ---- color: #ded8cb;
 */
-*,
-input,
-textarea,
-select,
-button {
-  color: #563A25;
-  border-color: #563A25;
+
+* {
+    font-family: 'Indie Flower', cursive;
+    color: #39452a;
 }
 
-::placeholder {
-  color: #563A25;
-  opacity: 0.7;
+a, a:visited {
+  color: #7F1A1C;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"]{
+  width: 30%;
+  padding: 6px 8px;
+  box-sizing: border-box;
+}
 
 .mountains-of-christmas-bold {
   font-family: "Mountains of Christmas", serif;
@@ -34,7 +39,6 @@ button {
 }
 
 
-
 body
 {
     background-color: #FCF6E9;
@@ -47,16 +51,8 @@ h1{
     font-family: "Mountains of Christmas", serif;
     font-weight: 700;
     font-style: normal;
-
 }
 
-form, p
-{
-    color: #39452a;
-    input[type="radio"], input[type="checkbox"], input[type="date"]{
-        accent-color: #7B925E;
-    }
-}
 
 .CV_Label, 
 .comments_label, 
@@ -93,24 +89,37 @@ form, p
 }
 
 input {
-  color: #563A25;
+  color: #39452a;
   accent-color: #7B925E;
+  font-weight: 600;
 }
 
+/* Autofill fields */
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus {
-  -webkit-text-fill-color: #563A25;
+  -webkit-text-fill-color: #39452a;
+  -webkit-font-weight: 600;
   -webkit-box-shadow: 0 0 0px 1000px #ded8cb inset;
 }
 
-input[type="date"] {
-  color: #563A25;
-  border: 1px solid #563A25;
-  background-color: transparent;
-  font-family: inherit;
-  padding: 4px 8px;
-  border-radius: 4px;
-  accent-color: #7B925E;
+@media (max-width: 756px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="date"] {
+    width: 60%;
+  }
 }
 
+@media (min-width: 1001px)
+{
+    input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="date"] {
+    width: 20%;
+  }
+}
