@@ -1,4 +1,4 @@
 - make all the fields required
 - make sure the colors are cohesive (the highlights for the selected things are green, not blue)
 - make sure things get underlined/colored when hovered/selected
-- make sure things are spaced out nicely
+- make sure things are spaced out nicely and have <br> afeter them
