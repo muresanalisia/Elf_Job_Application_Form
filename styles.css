@@ -42,6 +42,39 @@ form, p
         accent-color: #7B925E;
 
     }
-
-
 }
+
+.CV_Label, 
+.comments_label, 
+.photo_label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px; 
+    color: #39452a;
+}
+
+.photo_label, 
+.UploadPhotoButton {
+    margin-top: 20px;
+}
+
+.photo_label, 
+.UploadPhotoButton {
+    margin-top: 20px;
+}
+
+.textarea_comments {
+    width: 200px;
+    height: 120px;
+    padding: 8px;
+    color: #563A25;
+    border: 2px dashed #7B925E; 
+    background-color: transparent; 
+}
+
+.elf_selfie_container img {
+    display: block;
+    max-width: 200px;
+    height: auto;
+}
+
