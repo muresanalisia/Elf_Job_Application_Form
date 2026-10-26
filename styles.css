@@ -1,21 +1,38 @@
 /*All colors
     page background ---- color: #FCF6E9;
-    dark green text ---- color: #192b23;
+    dark green text ---- color: #39452a;
     brown text ---- color: #563A25;
     red text ---- color: #7F1A1C;
     light green text ---- color: #7B925E;
 */
 
+.mountains-of-christmas-bold {
+  font-family: "Mountains of Christmas", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 body
 {
-    color: #FCF6E9;
-
+    background-color: #FCF6E9;
     
+}
+
+h1{
+    color: #7F1A1C;
+    font-family: "Mountains of Christmas", serif;
+    font-weight: 700;
+    font-style: normal;
 
 }
 
-form
+form, p
 {
-    color: #192b23;
-        
+    color: #39452a;
+    input[type="radio"], input[type="checkbox"], input[type="date"]{
+        accent-color: #7B925E;
+
+    }
+
+
 }
