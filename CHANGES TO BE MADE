@@ -4,4 +4,5 @@
 - make sure things are spaced out nicely and have <br> afeter them
 - try to add a way to delete/see added files
 - i suggest we scrap the whole photo with elf hat thing, since we need js for it
-
+- make the textarea for motivation look like the one for comments
+- make sure it also works for phone screens 
