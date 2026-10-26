@@ -1,159 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
-    </head>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elf Job Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+  </head>
 
-    <body>
-        <header><h1>Elf Job Application</h1></header>
-        <!-- Radio buttons - Santa question -->
-        <form>
-            <label>Do you believe in Santa Claus?</label><br>
-            <input type="radio" id="yes" name="believe">
-            <label for="yes">Yes</label><br>
-            <input type="radio" id="ofc" name="believe">
-            <label for="ofc">YES, OF COURSE!</label><br>
-        </form>
-        <!-- Radio buttons - First and last name -->
-        <form>
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" autocomplete="given-name" name="fname"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" autocomplete="family-name" name="lname">
-        </form>
-        <form action="#" method="get" class="emailForm">
-            <fieldset>
-                <label for="email">Enter your email address:</label>
-                <input type="email" name="email" id="email" required>
-            </fieldset>
-        </form>
+  <body>
+    <header>
+      <h1>Elf Job Application</h1>
+    </header>
 
-        <form action="#" method="get" class="dateForm">
-            <fieldset>
-                <label for="date">Enter your birthday:</label>
-                <input type="date" name="date" id="date" required>
-            </fieldset>
-        </form>
-
+    <main>
+      <form action="#" method="post">
         
-<!-- Nice / naughty radio  -->
+        <!-- Radio Buttons - Belief in Santa Claus -->
+        <fieldset>
+          <legend>Do you believe in Santa Claus?</legend>
+          <label><input type="radio" id="believe-yes" name="believe" value="yes"> Yes</label><br>
+          <label><input type="radio" id="believe-ofc" name="believe" value="ofc"> YES, OF COURSE!</label>
+        </fieldset><br>
 
-    <label for = "nice_or_naughty">Have you been naughty or nice? (Don't lie, Santa knows the truth)</label>
+        <!-- Text Input - Name Input -->
+        <div>
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" autocomplete="given-name" name="fname"><br>
+          
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" autocomplete="family-name" name="lname">
+        </div><br>
 
-    <form>
-        <input type = "radio" id = "nice" name = "nice_or_naughty" value = "Nice">
-        <label for = "nice">Nice</label>
+        <!-- Email form -->
+        <div>
+          <label for="email">Enter your email address:</label><br>
+          <input type="email" name="email" id="email" required><br>
+        </div>
+
+        <!-- Date form - birthday -->
+        <div>
+          <label for="date">Enter your birthday:</label><br>
+          <input type="date" name="date" id="date" required>
         <br>
 
-        <input type = "radio" id = "naughty" name = "nice_or_naughty" value = "Naughty">
-        <label for = "naughty">Naughty</label>
-        <br>
-    </form>
+        <!-- Radio buttons -  Nice / Naughty -->
+        <fieldset>
+          <legend>Have you been naughty or nice? (Don't lie, Santa knows the truth)</legend>
+          <label><input type="radio" id="nice" name="nice_or_naughty" value="Nice"> Nice</label><br>
+          <label><input type="radio" id="naughty" name="nice_or_naughty" value="Naughty"> Naughty</label>
+        </fieldset><br>
 
-<!-- Motivation text area -->
+        <!-- Motivation text area -->
+        <div>
+          <label for="motivation">What motivates you to apply to this job?</label><br>
+          <textarea id="motivation" name="motivation" placeholder="Describe your motivation to be on Santa Claus's team of elves"></textarea>
+        </div><br>
 
-    <label for = "motivation"> What motivates you to apply to this job? </label>
+        <!-- Drop box - Height Selection -->
+        <div>
+          <label for="height">
+            Choose your height (cm)<br>
+            *If you are over 170cm, you may be redirected to our Giants department.
+          </label>
 
-    <form>
-        <textarea placeholder = "Describe your motivation to be on Santa Clause's team of elves" name = "motivation" id = "motivation"></textarea>
-    </form>
+          <select name="height" id="height">
+            <option value="" selected>--- Select Height ---</option>
+            <option value="0-60">0–60</option>
+            <option value="61-70">61–70</option>
+            <option value="71-80">71–80</option>
+            <option value="81-90">81–90</option>
+            <option value="91-100">91–100</option>
+            <option value="101-110">101–110</option>
+            <option value="111-120">111–120</option>
+            <option value="121-130">121–130</option>
+            <option value="131-140">131–140</option>
+            <option value="141-150">141–150</option>
+            <option value="151-160">151–160</option>
+            <option value="161-170">161–170</option>
+            <option value="171-180">171–180</option>
+            <option value="181-190">181–190</option>
+            <option value="191-200">191–200</option>
+            <option value="200+">200+</option>
+          </select>
+        </div><br>
 
-<!-- Height dropdown -->
-        
-   <label for = "height">Choose your height</label>
-        
-    <form>
-        <p>
-        Pleace note that if you are over 165cm tall, 
-        your application could be redirected to our Giants department
-        </p>
-        
-        <select name = "height">
-            <option value = "0" selected>---</option>
-            <option value = "1" >0-60</option>
-            <option value = "2" >61-70</option>
-            <option value = "3" >71-80</option>
-            <option value = "4" >81-90</option>
-            <option value = "5" >91-100</option>
-            <option value = "6" >101-110</option>
-            <option value = "7" >111-120</option>
-            <option value = "8" >121-130</option>
-            <option value = "9" >131-140</option>
-            <option value = "10" >141-150</option>
-            <option value = "11" >151-160</option>
-            <option value = "12" >161-170</option>
-            <option value = "13" >171-180</option>
-            <option value = "14" >181-190</option>
-            <option value = "15" >191-200</option>
-            <option value = "16" >200+</option>
-    </select>
-    </form>
-        
-    <!-- Dropdown - Size Selection -->
-    
-        <form>
-        <label for="select_size"> Size (for the uniform) </label>
-        <select id="select_size" name="size">
-            <option value="choose"> Choose your size </option>
+        <!-- Drop box - Size Selection -->
+        <div>
+          <label for="select_size">Size (for the uniform)</label><br>
+          <select id="select_size" name="size">
+            <option value="" selected>Choose your size</option>
             <option value="xxs">XXS</option>
-            <option value="xs"> XS</option>
+            <option value="xs">XS</option>
             <option value="s">S</option>
-            <option value="m"> M</option>
+            <option value="m">M</option>
             <option value="l">L</option>
-            <option value="xl"> XL</option>
+            <option value="xl">XL</option>
             <option value="xxl">XXL</option>
-         </select>
-        </form>
+          </select>
+        </div><br>
 
-      <!-- Checkbox - Skills and Competencies -->
-      <form>
-      <fieldset>
-        <legend>Skills and Competencies</legend>
-        <input type="checkbox" name="skill" value="youth" id="youth" required>
-        <label for="youth">Youth Diplomacy & High-Empathy Engagement</label><br>
-        <input type="checkbox" name="skill" value="overtime" id="overtime">
-        <label for="overtime">Peak-Season Q4 Overtime Endurance</label><br>
-        <input type="checkbox" name="skill" value="testing" id="testing">
-        <label for="testing">Emergency Cookie & Milk Palatability Testing</label><br>
-        <input type="checkbox" name="skill" value="db" id="db">
-        <label for="db">Naughty/Nice Ledger Database Administration *twice</label><br>
-        <input type="checkbox" name="skill" value="culinary" id="culinary">
-        <label for="culinary">Sugar-Based Culinary Skills</label><br>
-        <input type="checkbox" name="skill" value="reindeer" id="reindeer">
-        <label for="reindeer">Reindeer Handling & Stable Care</label><br>
-        <input type="checkbox" name="skill" value="toy" id="toy">
-        <label for="toy">Toy Fabrication & Handcrafting</label><br>
-        <input type="checkbox" name="skill" value="gift" id="gift">
-        <label for="gift">Gift Wrapping & Presentation</label><br>
-        <input type="checkbox" name="skill" value="cold" id="cold">
-        <label for="cold">High-Cold Resilience & Stealth</label><br>
-        <input type="checkbox" name="skill" value="teamwork" id="teamwork">
-        <label for="teamwork">Cheer Maintenance & Teamwork</label><br>
-        <input type="checkbox" name="skill" value="calc" id="calc">
-        <label for="calc">Chimney Ballistics & Spatial Calculation</label><br>
-        <input type="checkbox" name="skill" value="acoustics" id="acoustics">
-        <label for="acoustics">Toy Acoustics & Squeak Calibration</label><br>
-        <input type="checkbox" name="skill" value="cocoa" id="cocoa">
-        <label for="cocoa">Thermal Hot Cocoa Engineering </label><br>
-        <input type="checkbox" name="skill" value="spark" id="spark">
-        <label for="spark">Magic-Spark Containment</label><br>
-        <input type="checkbox" name="skill" value="snowdrift" id="snowdrift">
-        <label for="snowdrift">Snowdrift Cartography</label><br>
-        <input type="checkbox" name="skill" value="sack" id="sack">
-        <label for="sack">Sack Physics  & Compression</label><br>
-        <input type="checkbox" name="skill" value="languages" id="languages">
-        <label for="languages">All-languages-polyglotism </label><br>
-        <input type="checkbox" name="skill" value="handwriting" id="handwriting">
-        <label for="handwriting">Kids's Handwriting Fluency</label><br>
-        <input type="checkbox" name="skill" value="ornament" id="ornament">
-        <label for="ornament">Rapid Ornament Restoration</label>       
-     </fieldset>
-     </form>
+        <!-- Skills Checkboxes -->
+        <fieldset>
+          <legend>Skills and Competencies</legend>
+          <label><input type="checkbox" name="skill" value="youth"> Youth Diplomacy & High-Empathy Engagement</label><br>
+          <label><input type="checkbox" name="skill" value="overtime"> Peak-Season Q4 Overtime Endurance</label><br>
+          <label><input type="checkbox" name="skill" value="testing"> Emergency Cookie & Milk Palatability Testing</label><br>
+          <label><input type="checkbox" name="skill" value="db"> Naughty/Nice Ledger Database Administration *twice</label><br>
+          <label><input type="checkbox" name="skill" value="culinary"> Sugar-Based Culinary Skills</label><br>
+          <label><input type="checkbox" name="skill" value="reindeer"> Reindeer Handling & Stable Care</label><br>
+          <label><input type="checkbox" name="skill" value="toy"> Toy Fabrication & Handcrafting</label><br>
+          <label><input type="checkbox" name="skill" value="gift"> Gift Wrapping & Presentation</label><br>
+          <label><input type="checkbox" name="skill" value="cold"> High-Cold Resilience & Stealth</label><br>
+          <label><input type="checkbox" name="skill" value="teamwork"> Cheer Maintenance & Teamwork</label><br>
+          <label><input type="checkbox" name="skill" value="calc"> Chimney Ballistics & Spatial Calculation</label><br>
+          <label><input type="checkbox" name="skill" value="acoustics"> Toy Acoustics & Squeak Calibration</label><br>
+          <label><input type="checkbox" name="skill" value="cocoa"> Thermal Hot Cocoa Engineering</label><br>
+          <label><input type="checkbox" name="skill" value="spark"> Magic-Spark Containment</label><br>
+          <label><input type="checkbox" name="skill" value="snowdrift"> Snowdrift Cartography</label><br>
+          <label><input type="checkbox" name="skill" value="sack"> Sack Physics & Compression</label><br>
+          <label><input type="checkbox" name="skill" value="languages"> All-languages-polyglotism</label><br>
+          <label><input type="checkbox" name="skill" value="handwriting"> Kids's Handwriting Fluency</label><br>
+          <label><input type="checkbox" name="skill" value="ornament"> Rapid Ornament Restoration</label>
+        </fieldset><br>
 
-    </body>
-
+        <button type="submit">Submit Application</button>
+      </form>
+    </main>
+  </body>
 </html>
