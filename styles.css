@@ -53,6 +53,18 @@ h1{
     font-style: normal;
 }
 
+select {
+    width: 30%;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    border: 2px solid #7B925E; 
+    font-weight: 600;
+}  
+
+input[type="checkbox"]{
+    accent-color: #7B925E;
+    width: auto;
+}
 
 .CV_Label, 
 .comments_label, 
@@ -108,18 +120,20 @@ input:-webkit-autofill:focus {
   input[type="email"],
   input[type="password"],
   input[type="tel"],
-  input[type="date"] {
+  input[type="date"]
+  select {
     width: 60%;
   }
 }
 
 @media (min-width: 1001px)
 {
-    input[type="text"],
+  input[type="text"],
   input[type="email"],
   input[type="password"],
   input[type="tel"],
-  input[type="date"] {
+  input[type="date"] 
+  select{
     width: 20%;
   }
 }
