@@ -41,6 +41,12 @@ input[type="date"]{
 
 body
 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    
     background-color: #FCF6E9;
     font-family: 'Indie Flower', cursive;
     font-weight: 400;
