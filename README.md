@@ -1,19 +1,5 @@
 Elf Job Application Form
-Description and reflection on the evaluation methods used (~1000 characters)
 
-fieldset
-Radio Buttons
-Text Input
-Email form
-Phone number form
-Date form
-Password form
-Drop box
-Checkboxes
-Upload files
-Selfie upload
-Different screen sizes
+Description and reflection on the evaluation methods used (~1000 characters). Use heuristic evaluations, accessibility auditing tools, and/or conduct usability tests to evaluate your form and use the results to iterate and improve the user experience.
 
-CSS
-font
-colors
+A classmate tested our website and found the font sizes and colors to be clearly visible and on theme. ...
