@@ -85,7 +85,7 @@ input[type="checkbox"]{
     margin-top: 20px;
 }
 
-textarea, #motivation {
+.textarea_comments {
     width: 200px;
     height: 120px;
     padding: 8px;
