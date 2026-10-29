@@ -8,48 +8,32 @@
 */
 
 * {
-    font-family: 'Indie Flower', cursive;
-    color: #39452a;
+  box-sizing: border-box; 
 }
-
-a, a:visited {
-  color: #7F1A1C;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-input[type="date"]{
-  width: 30%;
-  padding: 6px 8px;
-  box-sizing: border-box;
-}
-
-.mountains-of-christmas-bold {
-  font-family: "Mountains of Christmas", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.indie-flower-regular {
-  font-family: "Indie Flower", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
 
 body
 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: 1.5em;
+    padding: 20px;
+    margin:0;
     
     background-color: #FCF6E9;
     font-family: 'Indie Flower', cursive;
     font-weight: 400;
+}
+
+a, a:visited {
+  color: #7F1A1C;
+}
+
+header {
+  width:100%;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 h1{
@@ -59,60 +43,125 @@ h1{
     font-style: normal;
 }
 
-select {
-    width: 30%;
-    padding: 6px 8px;
-    box-sizing: border-box;
-    border: 2px solid #7B925E; 
-    font-weight: 600;
-}  
-
-input[type="checkbox"]{
-    accent-color: #7B925E;
-    width: auto;
+main {
+  width: 90%;
+  margin: 0 auto;
 }
 
-.CV_Label, 
-.comments_label, 
+form{
+  width: 100%;
+  padding: 2.5rem 2rem;
+  background-color: #fffdf8;
+  border: 2px solid #ded8cb;
+  border-radius: 18px;
+}
+
+fieldset{
+  min-width: 0;
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.25rem;
+  border: 2px solid #7B925E;
+  border-radius: 12px;
+}
+
+
+legend,
+.CV_Label,
+.comments_label,
 .photo_label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 18px; 
-    color: #39452a;
+  display: block;
+  margin-bottom: 0.6rem;
+  color: #7F1A1C;
+  font-family: "Mountains of Christmas", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.photo_label, 
-.UploadPhotoButton {
-    margin-top: 20px;
-}
+legend{
+  padding: 0 0.4rem;
+  color: #7F1A1C;
+  margin-bottom: 0;
+} 
 
-.photo_label, 
-.UploadPhotoButton {
-    margin-top: 20px;
-}
-
-.textarea_comments {
-    width: 200px;
-    height: 120px;
-    padding: 8px;
-    color: #563A25;
-    border: 2px dashed #7B925E; 
-    background-color: transparent; 
-}
-
-.elf_selfie_container img {
-    display: block;
-    max-width: 200px;
-    height: auto;
+input,
+select,
+textarea,
+button {
+  font:inherit;
+  color: #39452a;
 }
 
 input {
-  color: #39452a;
+  font-weight: 600;
   accent-color: #7B925E;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  max-width: 420px;
+  min-height: 2.75rem;
+  margin-top: 0.3rem;
+  padding: 0.55rem 0.75rem;
+  border: 1.5px solid #7B925E;
+  border-radius: 8px;
+  background-color: #fffdf8;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+select {
   font-weight: 600;
 }
 
-/* Autofill fields */
+.textarea_comments {
+  height: 120px;
+  max-height: 8rem;
+  resize: vertical;
+  color: #563A25;
+  border: 2px dashed #7B925E; 
+  background-color: transparent; 
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+  width: auto;
+  accent-color: #7B925E;
+}
+
+input[type="file"]{
+  display: block;
+  max-width: 100%;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.photo_label, 
+.UploadPhotoButton {
+  margin-top: 20px;
+}
+
+.password-hint{
+  display: block;
+  max-width: 420px;
+  margin-top: 0.35rem;
+  color: #563A25;
+  font-size: 1rem;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #7f1a1c;
+  outline-offset: 2px;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus {
@@ -121,25 +170,46 @@ input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #ded8cb inset;
 }
 
-@media (max-width: 756px) {
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="tel"],
-  input[type="date"]
-  select {
-    width: 60%;
-  }
+.elf_selfie_container img {
+  display: block;
+  max-width: 200px;
+  height: auto;
 }
 
-@media (min-width: 1001px)
-{
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="tel"],
-  input[type="date"] 
-  select{
-    width: 20%;
+#submit_button {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  margin: 1.5rem auto 0;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 10px;
+  background-color: #7F1A1C;
+  color: #fffdf8;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#submit_button:hover {
+  background-color: #563A25;
+}
+
+
+@media (max-width: 600px) {
+  body{
+    padding: 1rem 0.65rem;
+    font-size: 1rem;
+  }
+
+  form{
+    padding: 1rem;
+  }
+
+  fieldset {
+    padding: 0.8rem;
+  }
+
+  main{
+    width:100%;
   }
 }
