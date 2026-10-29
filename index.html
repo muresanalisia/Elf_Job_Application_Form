@@ -20,13 +20,8 @@
       
       <form action="submitted.html" method="get">
         
-        <!-- Radio Buttons - Belief in Santa Claus -->
         <fieldset>
-          <legend>Do you believe in Santa Claus?</legend>
-          <label><input type="radio" id="believe-yes" name="believe" value="yes" required> Yes</label><br>
-          <label><input type="radio" id="believe-ofc" name="believe" value="ofc" required> YES, OF COURSE!</label>
-        </fieldset><br>
-
+        <legend>Create an account</legend>
         <!-- Text Input - Name Input -->
         <div>
           <label for="fname">First name:</label><br>
@@ -60,6 +55,14 @@
           <input type="password" name="password" id="password" placeholder="Super Secret Password" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must be at least 8 characters long and contain at least one number, one uppercase letter, and one lowercase letter."><br>
           <small class="password-hint">*Must be at least 8 characters long and contain at least one number, one uppercase letter, and one lowercase letter.</small><br>
         </div><br>
+        </fieldset>
+
+        <!-- Radio Buttons - Belief in Santa Claus -->
+        <fieldset>
+          <legend>Do you believe in Santa Claus?</legend>
+          <label><input type="radio" id="believe-yes" name="believe" value="yes" required> Yes</label><br>
+          <label><input type="radio" id="believe-ofc" name="believe" value="ofc" required> YES, OF COURSE!</label>
+        </fieldset><br>
 
         <!-- Radio buttons -  Nice / Naughty -->
         <fieldset>
@@ -68,12 +71,8 @@
           <label><input type="radio" id="naughty" name="nice_or_naughty" value="Naughty" required> Naughty</label>
         </fieldset><br>
 
-        <!-- Motivation text area -->
-        <div>
-          <label for="motivation">What motivates you to apply to this job?</label><br>
-          <textarea id="motivation" name="motivation" class="textarea_comments" placeholder="Describe your motivation to be on Santa Claus's team of elves" required></textarea>
-        </div><br>
-
+        <fieldset>
+          <label>Uniform dimensions</label>
         <!-- Drop box - Height Selection -->
         <div>
           <label for="height">
@@ -116,6 +115,7 @@
             <option value="xxl">XXL</option>
           </select>
         </div><br>
+      </fieldset>
 
         <!-- Skills Checkboxes -->
         <fieldset>
@@ -142,6 +142,16 @@
         </fieldset><br>
 
 
+        <fieldset>
+        
+         <legend>Motivation, CV and Comments</legend>
+        
+         <!-- Motivation text area -->
+        <div>
+          <label for="motivation"></label><br>
+          <textarea id="motivation" name="motivation" class="textarea_comments" placeholder="Describe your motivation to be on Santa Claus's team of elves" required></textarea>
+        </div><br>
+
           <!-- Upload CV and other relevant files -->
         <section class="CV_RelevantFiles">
             <label for="CVfile" class="CV_Label">Upload your CV and other relevant files</label>
@@ -155,19 +165,19 @@
             <label for="comments_box" class="comments_label">Any comments ?</label>
             <textarea id="comments_box" name="comments" class="textarea_comments" placeholder="Comments" ></textarea>  
         </section><br>
+    </fieldset><br>
 
-          <!-- Elf Preview -->
-        <section class="selfie_section">
-            <div class="elf_selfie_container">
-              <img src="ElfSelfie.png" alt="Christmas elf selfie preview">
-            </div>
-        </section>
+    <!-- Elf Preview -->
+      <section class="selfie_section">
+          <div class="elf_selfie_container">
+            <img src="ElfSelfie.png" alt="Christmas elf selfie preview">
+          </div>
+      </section>
 
-          
-          <!-- Accept terms checkbox -->
+      <!-- Accept terms checkbox -->
      <input type="checkbox" name="terms" id="terms" required>
      <label for="terms">I accept the <a href="terms.html" target="_blank">Terms & Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a></label><br>
-
+      
      <!-- Submit button -->
      <input type="submit" value="Submit form" id="submit_button">
           
